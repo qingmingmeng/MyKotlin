@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyKotlin</string>
+    <string name="hello">hello! kotlin demo</string>
+    <string name="show_dialog">请求网页</string>
+    <string name="title">提示</string>
+    <string name="content">系统出现异常</string>
+    <string name="wd">风向: %s</string>
+    <string name="ws">风力: %s</string>
+    <string name="city">城市: %s</string>
+    <string name="njd">实况信息: %s</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/layout_dialog_theme_shape"
+              android:gravity="center_horizontal"
+              android:minWidth="235dp"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="17dp"
+            android:text="提示"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingLeft="17dp"
+            android:paddingTop="17dp"
+            android:paddingRight="17dp"
+            android:paddingBottom="17dp"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+    <TextView style="@style/Divider1dp" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+
+        <View
+                style="@style/Divider1dp_portrait"
+                android:layout_height="19dp" />
+
+        <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

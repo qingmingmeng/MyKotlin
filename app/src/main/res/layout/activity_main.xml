@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="MainBinding">
+        <import type="com.example.mykotlin.viewmodel.WeatherVM"/>
+        <variable name="weatherVM"
+                  type="WeatherVM"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="@={weatherVM.cityName}"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="获取天气信息"
+                android:onClick="@{() -> weatherVM.showDialog()}"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="15dp"
+                  android:text="@{@string/city(weatherVM.weatherBean.get().weatherinfo.city)}"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="15dp"
+                  android:text="@{@string/wd(weatherVM.weatherBean.get().weatherinfo.WD)}"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="15dp"
+                  android:text="@{@string/ws(weatherVM.weatherBean.get().weatherinfo.WS)}"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="15dp"
+                  android:text="@{@string/njd(weatherVM.weatherBean.get().weatherinfo.njd)}"/>
+
+        <ListView
+                android:id="@+id/lv_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="跳转SecondActivity"
+                android:textAllCaps="false"
+                android:onClick="@{() -> weatherVM.jumpToSecond()}"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="测试跳转拦截"
+                android:textAllCaps="false"
+                android:onClick="@{() -> weatherVM.jumpBeIntercepted()}"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="测试跳转错误路径"
+                android:textAllCaps="false"
+                android:onClick="@{() -> weatherVM.jumpAnErrorPath()}"/>
+    </LinearLayout>
+</layout>
