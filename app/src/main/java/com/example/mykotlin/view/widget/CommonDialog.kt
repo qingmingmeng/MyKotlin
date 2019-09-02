@@ -20,7 +20,7 @@ class CommonDialog(context: Context): Dialog(context) {
         private var title: String? = "提示" //标题
         private var content: String? = "系统出现异常" //内容
         private var listener: IInterFace.DialogClick? = null //回调
-        //lateinit var onClick: (left: TextView, right: TextView, dialog: CommonDialog) -> Builder//点击回调方法
+        //private lateinit var onClick: (left: TextView, right: TextView, dialog: CommonDialog) -> Unit//点击回调方法，lambda表达式实现
 
         //设置标题
         fun setTitle(title: String = "提示"): Builder {
@@ -77,5 +77,10 @@ class CommonDialog(context: Context): Dialog(context) {
             window?.attributes = attributes
             return dialog
         }
+
+        //lambda表达式实现回调
+        /*fun click(click: ((left: TextView, right: TextView, dialog: CommonDialog) -> Unit)){
+            this.onClick = click
+        }*/
     }
 }

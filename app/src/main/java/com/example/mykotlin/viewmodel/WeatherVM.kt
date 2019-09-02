@@ -32,6 +32,10 @@ class WeatherVM(private val context: Context): BaseVM(context) {
 
     //弹出dialog方法
     fun showDialog(){
+        /*//使用lambda表达式实现回调
+        CommonDialog.Builder(context).click{ left: TextView, right: TextView, dialog: CommonDialog ->
+
+        }*/
         CommonDialog.Builder(context)
             .setTitle("温馨提示")
             .setContent("是否请求天气信息？继续操作可能会产生相应的流量费用!")
